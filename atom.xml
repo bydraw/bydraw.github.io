@@ -34,22 +34,4 @@
     
   </entry>
   
-  <entry>
-    <title>Hello World</title>
-    <link href="https://bydraw.github.io/2018/02/01/hello-world/"/>
-    <id>https://bydraw.github.io/2018/02/01/hello-world/</id>
-    <published>2018-02-01T01:50:51.356Z</published>
-    <updated>2018-02-08T09:36:53.111Z</updated>
-    
-    <content type="html"><![CDATA[<p><i>Welcome to my <a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a> blog!</i><br><a id="more"></a><br>Enjoy it.</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;i&gt;Welcome to my &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;hexo&lt;/a&gt; blog!&lt;/i&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
 </feed>
