@@ -51,7 +51,8 @@
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="A blog test with hexo">
+    <meta name="description" itemprop="description" content="
+一个简单的vue单项数据流设定下子组件改变父组件数据的方法由文档中使用data作为局部数据处理的办法演变而来">
     <meta name="keywords" content="">
     <meta name="theme-color" content="#0097A7">
 
@@ -213,7 +214,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Bydraw&#39;s hexo">
-    <meta name="msapplication-starturl" content="https://bydraw.github.io/">
+    <meta name="msapplication-starturl" content="https://bydraw.github.io/2018/04/03/20180403_2/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Bydraw&#39;s hexo">
@@ -228,13 +229,17 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://bydraw.github.io/">
+    <meta property="og:url" content="https://bydraw.github.io/2018/04/03/20180403_2/">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Bydraw&#39;s hexo">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="A blog test with hexo">
+    <meta property="og:description" content="
+一个简单的vue单项数据流设定下子组件改变父组件数据的方法由文档中使用data作为局部数据处理的办法演变而来">
     
 
+    
+        <meta property="article:published_time" content="Tue Apr 03 2018 13:36:21 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 03 2018 13:40:29 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,35 +247,44 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://bydraw.github.io" />
+        <link rel="canonical" href="https://bydraw.github.io/2018/04/03/20180403_2/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
+
+
 <script type="application/ld+json">
 {
-    "@context": "http://schema.org",
-    "@type": "Website",
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://bydraw.github.io/2018/04/03/20180403_2/index.html",
+    "headline": "",
+    "datePublished": "Tue Apr 03 2018 13:36:21 GMT+0800",
+    "dateModified": "Tue Apr 03 2018 13:40:29 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Bydraw Holy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.jpg"
+        },
+        "description": "你好，陌生人"
+    },
     "publisher": {
         "@type": "Organization",
         "name": "Bydraw&#39;s hexo",
-        "logo": "/img/favicon.png"
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
     },
-    "url": "https://bydraw.github.io",
-    "image": {
-        "@type": "ImageObject",
-        "url": "/img/favicon.png"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://bydraw.github.io"
-    },
-    "description": "A blog test with hexo"
+    "keywords": "",
+    "description": "
+一个简单的vue单项数据流设定下子组件改变父组件数据的方法由文档中使用data作为局部数据处理的办法演变而来",
 }
 </script>
-
-
 
 
     
@@ -304,339 +318,240 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
+                    <!-- Post TOC -->
+
     
-        <!-- Paradox Header -->
-        <!-- Daily pic -->
-<div class="mdl-card mdl-shadow--2dp daily-pic mdl-cell mdl-cell--8-col index-top-block">
-
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
-        <p class="index-top-block-slogan"><a href="#">
-        
-            
-                你好，陌生人
-            
-        
-        </a></p>
-    </div>
-
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="/img/avatar.jpg" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>Bydraw Holy</strong>
-        </div>
-    </div>
-</div>
-
-        <!-- Blog info -->
-<div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-
-    <!-- Search -->
-    
-
-
-
-
-    <!-- Local -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
-        <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-            <i class="material-icons mdl-color-text--white" role="presentation">search</i>
-        </label>
-
-        <form autocomplete="off" id="search-form" class="mdl-textfield__expandable-holder">
-            <input type="text" id="search" class="form-control mdl-textfield__input search-input" name="q" results="0" placeholder=""/>
-            <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-        </form>
-    </div>
-    <div id="local-search-result"></div>
-
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="#" target="_blank">
-            <img src="/img/logo.gif" alt="logo" />
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
         </a>
     </div>
+    -->
 
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>Bydraw&#39;s hexo</strong>
-        </div>
-        <div class="section-spacer"></div>
 
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-        </ul>
-
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-
-            
-
-            
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Bydraw&#39;s hexo&url=https://bydraw.github.io&pic=https://bydraw.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到微博
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=Bydraw&#39;s hexo&url=https://bydraw.github.io&via=Bydraw Holy" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Twitter
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://bydraw.github.io" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Facebook
-                    </li>
-                </a>
-            
-
-            
-                <a class="index_share-link" href="https://plus.google.com/share?url=https://bydraw.github.io" target="_blank">
-                    <li class="mdl-menu__item mdl-js-ripple-effect">
-                        分享到 Google+
-                    </li>
-                </a>
-            
-
-            
-
-            
-                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Bydraw&#39;s hexo&title=Bydraw&#39;s hexo&summary=A blog test with hexo&pics=https://bydraw.github.io/img/favicon.png&url=https://bydraw.github.io" target="_blank">
-                    <li class="mdl-menu__item">
-                        分享到 QQ
-                    </li>
-                </a>
-            
-
-            
-        </ul>
-    </div>
-</div>
-
+    <!-- Left aligned menu below button -->
     
-    <div class="locate-thumbnail-symbol"></div>
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
 
-    <!-- Pin on top -->
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一个简单的vue单项数据流设定下子组件改变父组件数据的方法"><span class="post-toc-number">1.</span> <span class="post-toc-text">一个简单的vue单项数据流设定下子组件改变父组件数据的方法</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/04/03/20180403_2/" target="_blank"></a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-一个简单的vue单项数据流设定下子组件改变父组件数据的方法由文档中使用data作为局部数据处理的办法演变而来
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/04/03/20180403_2/" target="_blank">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <!-- <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <!--<div id="author-avatar">
-                <img src="/img/avatar.jpg" width="44px" height="44px" alt="Bydraw Holy's avatar">
-            </div>
-            <div>
-                <strong>Bydraw Holy</strong>
-                <span>4月 03, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <!--<span class="post_entry-views">
-            </span>
-        </div>
-    </div> -->
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/04/03/20180403/" target="_blank">2017 Easyui 使用总结 （编辑中）</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            即使Easyui的大部分功能实现已经落后于当前的前端技术，但其丰富的功能和超前的思想仍令人赞叹。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/04/03/20180403/" target="_blank">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <!-- <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <!--<div id="author-avatar">
-                <img src="/img/avatar.jpg" width="44px" height="44px" alt="Bydraw Holy's avatar">
-            </div>
-            <div>
-                <strong>Bydraw Holy</strong>
-                <span>4月 03, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <!--<span class="post_entry-views">
-            </span>
-        </div>
-    </div> -->
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/02/08/20180208/" target="_blank">知是一年春又来，冰雪也消散。</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            2017过去了，2018开始了。
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/02/08/20180208/" target="_blank">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <!-- <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <!--<div id="author-avatar">
-                <img src="/img/avatar.jpg" width="44px" height="44px" alt="Bydraw Holy's avatar">
-            </div>
-            <div>
-                <strong>Bydraw Holy</strong>
-                <span>2月 08, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <!--<span class="post_entry-views">
-            </span>
-        </div>
-    </div> -->
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Bydraw Holy</strong>
+        <span>4月 03, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACY0lEQVR42u3aQXLjMAwEQP//07svkDxDSAyTap1SdiyidSAhAJ9/f/r64OHh4eHh4eHhHcb7xFf7/1e/ur/PJDY8PDy8nbwvW+3twlehXN0hCXEUGx4eHt5G3v22fs9LNvSrFe9XqWPDw8PDO4yXL5MA3lgXDw8P70xenviu3RMPDw/vt/CSF/6kiJCkzofWWvDw8PBiXtvK2vn3D/T38PDw8G559UjTUtFhsvVvnSnDw8PDC3hrhYD5cMBk0OqBNwY8PDy8h3iTgPIH1BYv8pEFPDw8vJ28eYOqblOV+KKwi4eHh/cyL29rRens0jHTjiN8Oajw8PDwNvKufna/3ScHwNqRkw8Z4OHh4f0UL1k4D+WNgkUSGx4eHt4JvLWGVjtMkI9bfXlkeHh4eBt57QY9OTDWvn3ljQEPDw/voQ5Rckgkj6O9W1siwcPDw9vPaxlrpDyNbsu7eHh4eGfy5iXddlx1UlzGw8PD28nLixHtUNSkAdaWRfDw8PDe5q2lsJMRgQSfHy31uCoeHh7emJcHtFZgbVPq9sipzz08PDy8MW+SXq8lzW2aXkeFh4eHt5GXl1DzodX7u+WfjCYj8PDw8B7lrY3Ut2XZvDE2KUPg4eHh7eG1VxtoW/Z9IDXHw8PDe5n3xsbdbu7J0GpR5MXDw8PbwksOg/yTpAE2Hz7Aw8PDO4HXJsfFkmVxtj1+8PDw8E7mJel40k5Lkub8/nh4eHi/hZcMRSWNtLWCCB4eHt4JvByQHxhPDQQU0eLh4eFt4U0aYO14Qfsg6oIyHh4e3su8v3fh4eHh4eHh4eEdcP0H4s8HSoWpT2kAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=https://bydraw.github.io/2018/04/03/20180403_2/index.html&pic=https://bydraw.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&url=https://bydraw.github.io/2018/04/03/20180403_2/index.html&via=Bydraw Holy" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://bydraw.github.io/2018/04/03/20180403_2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://bydraw.github.io/2018/04/03/20180403_2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Bydraw&#39;s hexo&title=&summary=A blog test with hexo&pics=https://bydraw.github.io/img/favicon.png&url=https://bydraw.github.io/2018/04/03/20180403_2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <hr>
+<h2 id="一个简单的vue单项数据流设定下子组件改变父组件数据的方法"><a href="#一个简单的vue单项数据流设定下子组件改变父组件数据的方法" class="headerlink" title="一个简单的vue单项数据流设定下子组件改变父组件数据的方法"></a>一个简单的vue单项数据流设定下子组件改变父组件数据的方法</h2><p><i>由文档中使用data作为局部数据处理的办法演变而来</i><br><a id="more"></a><br>HTML<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;root&quot;&gt;</span><br><span class="line">    &lt;test :msg=&quot;msg&quot; @msgchange=&quot;handleMsgChange&quot;&gt;&lt;/test&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>JS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(&apos;test&apos;, &#123;</span><br><span class="line">    template: &apos;&lt;input v-model=&quot;msgData&quot;&gt;&apos;,</span><br><span class="line">    props: [&apos;msg&apos;],</span><br><span class="line">    data: function () &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            msgData: this.msg</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    watch: &#123;</span><br><span class="line">        msgData: function () &#123;</span><br><span class="line">            this.$emit(&apos;msgchange&apos;, this.msgData)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">new Vue(&#123;</span><br><span class="line">    el: &quot;#root&quot;,</span><br><span class="line">    data: &#123;</span><br><span class="line">        msg: &apos;hello&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        handleMsgChange: function (val) &#123;</span><br><span class="line">            this.msg = val</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文章来自 <a href="https://bydraw.github.io/" target="_blank">Bydraw Space</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://bydraw.github.io/2018/04/03/20180403_2/">https://bydraw.github.io/2018/04/03/20180403_2/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/04/03/20180403/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -920,31 +835,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
-
-    <!-- Swiftye -->
-    
-
-    <!-- Local Search-->
-    
-        <script type="text/ls-javascript" id="search-local-js-script">
-    var searchFunc=function(c,a,b){$.ajax({url:c,dataType:"xml",success:function(e){var d=$("entry",e).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get();var g=document.getElementById(a);var f=document.getElementById(b);g.addEventListener("input",function(){var i='<ul class="search-result-list">';var h=this.value.trim().toLowerCase().split(/[\s\-]+/);f.innerHTML="";if(this.value.trim().length<=0){return}d.forEach(function(o){var n=true;var s=[];var t=o.title.trim().toLowerCase();var m=o.content.trim().replace(/<[^>]+>/g,"").toLowerCase();var j=o.url;var u=-1;var q=-1;var p=-1;if(t!==""&&m!==""){h.forEach(function(w,x){u=t.indexOf(w);q=m.indexOf(w);if(u<0&&q<0){n=false}else{if(q<0){q=0}if(x===0){p=q}}})}if(n){i+='<li><a href="'+j+'" class="search-result-title" target="_blank">'+t;var r=o.content.trim().replace(/<[^>]+>/g,"");if(p>=0){var k=p-6;var l=p+6;if(k<0){k=0}if(k===0){l=10}if(l>r.length){l=r.length}var v=r.substr(k,l);h.forEach(function(w){var x=new RegExp(w,"gi");v=v.replace(x,'<em class="search-keyword">'+w+"</em>")});i+='<p class="search-result">'+v+"...</p></a>"}}});f.innerHTML=i})}})};
-</script>
-
-
-        <script type="text/ls-javascript" id="search-input-script">
-            var inputArea = document.querySelector('#search');
-            var getSearchFile = function() {
-                var path = 'search.xml';
-                searchFunc(path, 'search', 'local-search-result');
-            }
-
-            if(inputArea) {
-                inputArea.onfocus = function() {
-                    getSearchFile();
-                }
-            }
-        </script>
-    
 
 
 <!-- UC Browser Compatible -->
