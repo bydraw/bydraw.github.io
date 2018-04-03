@@ -307,13 +307,13 @@
     
 
         <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/04/03/20180403_2/" target="_blank">一个简单的vue单项数据流设定下子组件改变父组件数据的方法</a></p>
+        <p class="article-headline-p"><a href="/2018/04/03/20180403_2/" target="_blank">一个简单的父子组件数据同步的方法</a></p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            由文档中使用data作为局部数据处理的办法演变而来
+            由文档中复刻data作为局部数据处理的方法演变而来
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -773,7 +773,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <script>
     (function(){
-        $("#more").parent().find('i').css({'display':'block','background':'#F5F5F5','padding':'5px','borderLeft':'2px solid yellowgreen'})
+        $("#more").parent().find('i').css({'display':'block','background':'#F5F5F5','padding':'5px','borderLeft':'2px solid yellowgreen','font-style':'normal','font-weight':'bold'})
         var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
 
         for (var i = 0; i < scriptList.length; ++i) {
