@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bydraw.github.io/"/>
-  <updated>2018-03-14T05:23:36.311Z</updated>
+  <updated>2018-04-03T02:31:35.502Z</updated>
   <id>https://bydraw.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2017 Easyui 使用总结 （编辑中）</title>
+    <link href="https://bydraw.github.io/2018/04/03/20180403/"/>
+    <id>https://bydraw.github.io/2018/04/03/20180403/</id>
+    <published>2018-04-03T02:18:42.850Z</published>
+    <updated>2018-04-03T02:31:35.502Z</updated>
+    
+    <content type="html"><![CDATA[<p><i>即使Easyui的大部分功能实现已经落后于当前的前端技术，但其丰富的功能和超前的思想仍令人赞叹。</i><br><a id="more"></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Easyui作为一个基于jQuery的早期UI框架，给开发者带来了很多益处，极大地缩减了非核心业务外的开发时间。丰富的可配置控件和API让开发变得非常灵活，可以借此实现非常繁杂的业务功能。虽然随着前端技术的发展和业务需求的逐渐庞大，Easyui传统的DOM实现导致了大场景下的性能问题，但其HTML/JS的双风格写法与当下流行的Vue/React框架思想不谋而合，这着实让人感叹。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;i&gt;即使Easyui的大部分功能实现已经落后于当前的前端技术，但其丰富的功能和超前的思想仍令人赞叹。&lt;/i&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>知是一年春又来，冰雪也消散。</title>

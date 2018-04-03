@@ -3,6 +3,16 @@
   
     
     <entry>
+      <title><![CDATA[2017 Easyui 使用总结 （编辑中）]]></title>
+      <url>/2018/04/03/20180403/</url>
+      <content type="html"><![CDATA[<p><i>即使Easyui的大部分功能实现已经落后于当前的前端技术，但其丰富的功能和超前的思想仍令人赞叹。</i><br><a id="more"></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Easyui作为一个基于jQuery的早期UI框架，给开发者带来了很多益处，极大地缩减了非核心业务外的开发时间。丰富的可配置控件和API让开发变得非常灵活，可以借此实现非常繁杂的业务功能。虽然随着前端技术的发展和业务需求的逐渐庞大，Easyui传统的DOM实现导致了大场景下的性能问题，但其HTML/JS的双风格写法与当下流行的Vue/React框架思想不谋而合，这着实让人感叹。</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[知是一年春又来，冰雪也消散。]]></title>
       <url>/2018/02/08/20180208/</url>
       <content type="html"><![CDATA[<p><i>2017过去了，2018开始了。</i><br><a id="more"></a></p>
