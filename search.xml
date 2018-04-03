@@ -92,7 +92,8 @@ new Vue({
         }
     }
 })
-var vm = new Vue({
+
+new Vue({
     el: &quot;#root&quot;,
     data: {
         msg: &#39;hello&#39;
