@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bydraw.github.io/"/>
-  <updated>2018-04-03T06:32:37.646Z</updated>
+  <updated>2018-04-03T06:34:24.445Z</updated>
   <id>https://bydraw.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一个简单的父子组件数据同步的方法</title>
+    <title>一个简单Vue父子组件数据同步的方法</title>
     <link href="https://bydraw.github.io/2018/04/03/20180403_2/"/>
     <id>https://bydraw.github.io/2018/04/03/20180403_2/</id>
     <published>2018-04-03T05:36:21.820Z</published>
-    <updated>2018-04-03T06:32:37.646Z</updated>
+    <updated>2018-04-03T06:34:24.445Z</updated>
     
     <content type="html"><![CDATA[<p><i>由文档中复刻data作为局部数据处理的方法演变而来</i><br><a id="more"></a><br>Vue 2.x版本中，父子组件之间是单向数据流，这意味着不应该在子组件内部改变父组件传进来的数据，而有时这种场景确实存在。<br>对此，官网文档上是通过组件内部定义data变量接受prop或使用计算属性处理一遍，但这仅仅相当于在组件内部初始化一次，产生一个内部的、新的变量，这样并不能影响到外部父组件上的data。<br>而实际想实现的是子组件接受外部prop传进的变量，并在组件内部改变这个变量时响应到父组件并改变它。<br>此处例子比较特殊，是一个用v-model绑定数据的input模型，由于v-model的特殊性，在输入框内容改变时就会响应到model。<br>所以大概思路就是：在组件内部定义data，接受prop，并监听此变量，一旦变化便直接$emit一个事件传递给父组件，父组件通过给组件绑定的方法改变自身data，从而实现父子组件数据同步。</p><p>HTML</p><pre><code>&lt;div id=&quot;root&quot;&gt;    &lt;test :msg=&quot;msg&quot; @msgchange=&quot;handleMsgChange&quot;&gt;&lt;/test&gt;&lt;/div&gt;</code></pre><p>JS</p><pre><code>Vue.component(&#39;test&#39;, {    template: &#39;&lt;input v-model=&quot;msgData&quot;&gt;&#39;,    props: [&#39;msg&#39;],    data: function () {        return {            msgData: this.msg        }    },    watch: {        msgData: function () {            this.$emit(&#39;msgchange&#39;, this.msgData)        }    }})new Vue({    el: &#39;#root&#39;,    data: {        msg: &#39;hello&#39;    },    methods: {        handleMsgChange: function (val) {            this.msg = val        }    }})</code></pre>]]></content>
     
