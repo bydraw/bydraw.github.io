@@ -448,7 +448,7 @@ a {
     margin-bottom: 47.59px
 }
 @media screen and (max-width: 480px) {
-    #c_n12{display:none}
+    #scheme-Paradox>canvas{display:none}
     #scheme-Paradox .index-top-block {
         transition: 1s;
         width: 100%;

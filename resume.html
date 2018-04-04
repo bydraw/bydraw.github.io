@@ -76,7 +76,7 @@
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?X3Fm4sZmeyp4YAfBnCJXuA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?AqXbtWOiB6qXXHPvozha2Q==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
 
@@ -455,6 +455,24 @@
   #main>ul {
     margin-bottom: 15px;
   }
+
+  #printBtn {
+    width: 170px;
+    height: 50px;
+    background-color: #00D1B2;
+    margin: 10px auto;
+    border-radius: 5px;
+    color: #fff;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+  }
+
+  #printBtn:hover {
+    background-color: #00C4A7;
+  }
 </style>
 
 
@@ -498,7 +516,33 @@
       <li>微信：Bydraw</li>
       <li>QQ：756324892</li>
     </ul>
-  </div></body>
+  </div>
+  <script>
+    window.onload = function () {
+      var Nprint = window.print;
+      window.print = function () {
+        try {
+          document.querySelector('#printBtn').style.display = 'none';
+          // document.querySelector('#scheme-Paradox>canvas').style.display = 'none';
+          Nprint();
+          document.querySelector('#printBtn').style.display = 'block';
+          // document.querySelector('#scheme-Paradox>canvas').style.display = 'block';
+        } catch (e) {
+          alert('当前浏览器不支持打印！');
+          return;
+        }
+      }
+
+      var printBtn = document.createElement('div');
+      printBtn.innerHTML = '打印';
+      printBtn.id = "printBtn";
+      printBtn.onclick = function () {
+        window.print();
+      }
+      document.querySelector('.material-post_container').appendChild(printBtn);
+
+    }
+  </script></body>
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -757,11 +801,6 @@ It will not impact the appearance and can give developers a lot of support :)
         <!--Copyright-->
         <div id="copyright">
             Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Bydraw's Space
-            
-                <br>
-                
-                    <script src="/canvas-net.js"></script>
-                
             
         </div>
 
