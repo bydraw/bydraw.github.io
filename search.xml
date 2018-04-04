@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[一个简单Vue父子组件数据同步的方法]]></title>
+      <title><![CDATA[一个简单的Vue父子组件数据同步方法]]></title>
       <url>/2018/04/03/20180403_2/</url>
-      <content type="html"><![CDATA[<p><i>由文档中复刻data作为局部数据处理的方法演变而来</i><br><a id="more"></a></p>
+      <content type="html"><![CDATA[<p><i>由文档中复刻data作为局部数据处理的方法演变而来。</i><br><a id="more"></a></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Vue 2.x版本中，父子组件之间是<strong>单向数据流</strong>，这意味着不应该在子组件内部改变父组件传进来的数据，而有时这种场景确实存在。<br>对此，官网文档上是通过<strong>组件内部定义data变量接受prop或使用计算属性处理一遍</strong>，但这仅仅相当于在组件内部初始化一次，产生一个内部的、新的变量，这样并<strong>不能影响到外部父组件上的data</strong>。<br>而实际想实现的是子组件接受外部prop传进的变量，并在组件内部改变这个变量时响应到父组件并改变它。<br>所以大概思路就是：<strong>在组件内部定义data，接受prop，并监听此变量，一旦变化便直接$emit一个事件传递给父组件，父组件通过给组件绑定的方法改变自身data，从而实现父子组件数据同步</strong>。</p>
 <h2 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h2><p>此处例子比较特殊，是一个用v-model绑定数据的input模型，由于v-model的特殊性，在输入框内容改变时就会响应到model。<br>先看最原始的模型：<br><em>HTML</em></p>
 <pre><code>&lt;div id=&quot;root&quot;&gt;
@@ -106,6 +106,12 @@ new Vue({
 })
 </code></pre>]]></content>
       
+        <categories>
+            
+            <category> vue </category>
+            
+        </categories>
+        
         
     </entry>
     
@@ -116,6 +122,12 @@ new Vue({
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Easyui作为一个基于jQuery的早期UI框架，给开发者带来了很多益处，极大地缩减了非核心业务外的开发时间。丰富的可配置控件和API让开发变得非常灵活，可以借此实现非常繁杂的业务功能。虽然随着前端技术的发展和业务需求的逐渐庞大，Easyui传统的DOM实现导致了大场景下的性能问题，但其HTML/JS的双风格写法与当下流行的Vue/React框架思想不谋而合，这着实让人感叹。</p>
 ]]></content>
       
+        <categories>
+            
+            <category> easyui </category>
+            
+        </categories>
+        
         
     </entry>
     
@@ -140,6 +152,12 @@ new Vue({
 </ol>
 ]]></content>
       
+        <categories>
+            
+            <category> 随笔 </category>
+            
+        </categories>
+        
         
     </entry>
     
