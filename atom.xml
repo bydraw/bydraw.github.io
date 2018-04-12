@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bydraw.github.io/"/>
-  <updated>2018-04-04T05:33:13.569Z</updated>
+  <updated>2018-04-12T02:35:57.405Z</updated>
   <id>https://bydraw.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS多级属性对象转换为一级属性对象</title>
+    <link href="https://bydraw.github.io/2018/04/12/20180412/"/>
+    <id>https://bydraw.github.io/2018/04/12/20180412/</id>
+    <published>2018-04-12T02:28:45.317Z</published>
+    <updated>2018-04-12T02:35:57.405Z</updated>
+    
+    <content type="html"><![CDATA[<p><i>简单的遍历和递归。</i><br><a id="more"></a><br>转换前：</p><pre><code>{  singleProp: 1,  multiProp: {    a: 2,    b: {      x: 3,      y: 4    }  }}</code></pre><p>转换后</p><pre><code>{  singleProp: 1,  multiProp.a: 2,  multiProp.b.x: 3,  multiProp.b.y :4}</code></pre><p>具体方法</p><pre><code>function multToSingleObj(obj) {  var newObj = {};  for (var key in obj) {    var tempAttr = obj[key];    if (typeof (tempAttr) !== &quot;object&quot;) {      newObj[key] = tempAttr;    } else {      var subObj = multToSingleObj(tempAttr);      for (var subKey in subObj) {        newObj[key + &quot;.&quot; + subKey] = subObj[subKey];      }    }  }  return newObj;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;i&gt;简单的遍历和递归。&lt;/i&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="javacsript" scheme="https://bydraw.github.io/categories/javacsript/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>一个简单的Vue父子组件数据同步方法</title>

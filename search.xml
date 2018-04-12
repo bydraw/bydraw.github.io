@@ -3,6 +3,54 @@
   
     
     <entry>
+      <title><![CDATA[JS多级属性对象转换为一级属性对象]]></title>
+      <url>/2018/04/12/20180412/</url>
+      <content type="html"><![CDATA[<p><i>简单的遍历和递归。</i><br><a id="more"></a><br>转换前：</p>
+<pre><code>{
+  singleProp: 1,
+  multiProp: {
+    a: 2,
+    b: {
+      x: 3,
+      y: 4
+    }
+  }
+}
+</code></pre><p>转换后</p>
+<pre><code>{
+  singleProp: 1,
+  multiProp.a: 2,
+  multiProp.b.x: 3,
+  multiProp.b.y :4
+}
+</code></pre><p>具体方法</p>
+<pre><code>function multToSingleObj(obj) {
+  var newObj = {};
+  for (var key in obj) {
+    var tempAttr = obj[key];
+    if (typeof (tempAttr) !== &quot;object&quot;) {
+      newObj[key] = tempAttr;
+    } else {
+      var subObj = multToSingleObj(tempAttr);
+      for (var subKey in subObj) {
+        newObj[key + &quot;.&quot; + subKey] = subObj[subKey];
+      }
+    }
+  }
+  return newObj;
+}
+</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> javacsript </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[一个简单的Vue父子组件数据同步方法]]></title>
       <url>/2018/04/03/20180403_2/</url>
       <content type="html"><![CDATA[<p><i>由文档中复刻data作为局部数据处理的方法演变而来。</i><br><a id="more"></a></p>
