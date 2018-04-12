@@ -16,14 +16,14 @@
     }
   }
 }
-</code></pre><p>转换后</p>
+</code></pre><p>转换后：</p>
 <pre><code>{
   singleProp: 1,
   multiProp.a: 2,
   multiProp.b.x: 3,
   multiProp.b.y :4
 }
-</code></pre><p>具体方法</p>
+</code></pre><p>具体方法：</p>
 <pre><code>function multToSingleObj(obj) {
   var newObj = {};
   for (var key in obj) {
