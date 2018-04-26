@@ -78,7 +78,7 @@
     <!-- Import CSS -->
     
         <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?AqXbtWOiB6qXXHPvozha2Q==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?K7Fzq0PFbe8DfAwtV6ZQog==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
 
@@ -196,7 +196,7 @@
 <!-- Import Font -->
 <!-- Import Roboto -->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.css.network/css?family=Roboto:300,400,500" rel="stylesheet">
 
 
 <!-- Import Material Icons -->
@@ -914,7 +914,10 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <script>
     (function(){
-        $("#more").parent().find('i').css({'display':'block','background':'#F5F5F5','padding':'5px','borderLeft':'2px solid yellowgreen','font-style':'normal','font-weight':'bold'})
+        var ilabels = document.querySelectorAll('#post-content i');
+        for(var i = 0; i < ilabels.length; i++){
+            ilabels[i].classList.add('i-intro');
+        }
         var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
 
         for (var i = 0; i < scriptList.length; ++i) {
