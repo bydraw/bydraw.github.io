@@ -2279,15 +2279,15 @@ $(document).ready(function() {
             var child;
 
             child = this.childNodes[0].classList;
-
-            if (child.contains('MD-burger-arrow')) {
-                child.remove('MD-burger-arrow');
-                child.add('MD-burger-line');
-            } else {
-                child.remove('MD-burger-line');
-                child.add('MD-burger-arrow');
+            if(child){
+                if (child.contains('MD-burger-arrow')) {
+                    child.remove('MD-burger-arrow');
+                    child.add('MD-burger-line');
+                } else {
+                    child.remove('MD-burger-line');
+                    child.add('MD-burger-arrow');
+                }
             }
-
         });
 
 })();
