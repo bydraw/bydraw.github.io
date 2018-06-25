@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bydraw.github.io/"/>
-  <updated>2018-06-25T09:06:39.317Z</updated>
+  <updated>2018-06-25T09:08:12.926Z</updated>
   <id>https://bydraw.github.io/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一句话将kebab-case转换为PascalCase</title>
+    <title>一句话将kebab-case转换为camelCase</title>
     <link href="https://bydraw.github.io/2018/06/25/20180625/"/>
     <id>https://bydraw.github.io/2018/06/25/20180625/</id>
     <published>2018-06-25T08:58:31.740Z</published>
-    <updated>2018-06-25T09:06:39.317Z</updated>
+    <updated>2018-06-25T09:08:12.926Z</updated>
     
-    <content type="html"><![CDATA[<p><i>ES6+正则</i><br><a id="more"></a></p><pre><code>const toCamel = str =&gt; str.replace(/-(\w)/g, ($0, $1) =&gt; $1.toUpperCase())</code></pre><p>效果：</p><pre><code>console.log(toCamel(&#39;patience-from-zhou&#39;))// patienceFromZhou</code></pre>]]></content>
+    <content type="html"><![CDATA[<p><i>ES6+正则。</i><br><a id="more"></a></p><pre><code>const toCamel = str =&gt; str.replace(/-(\w)/g, ($0, $1) =&gt; $1.toUpperCase())</code></pre><p>效果：</p><pre><code>console.log(toCamel(&#39;patience-from-zhou&#39;))// patienceFromZhou</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;i&gt;ES6+正则&lt;/i&gt;&lt;br&gt;
+      &lt;p&gt;&lt;i&gt;ES6+正则。&lt;/i&gt;&lt;br&gt;
     
     </summary>
     
