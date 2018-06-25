@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bydraw.github.io/"/>
-  <updated>2018-06-25T09:03:01.249Z</updated>
+  <updated>2018-06-25T09:06:39.317Z</updated>
   <id>https://bydraw.github.io/</id>
   
   <author>
@@ -21,18 +21,13 @@
     <link href="https://bydraw.github.io/2018/06/25/20180625/"/>
     <id>https://bydraw.github.io/2018/06/25/20180625/</id>
     <published>2018-06-25T08:58:31.740Z</published>
-    <updated>2018-06-25T09:03:01.249Z</updated>
+    <updated>2018-06-25T09:06:39.317Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>const toCamel = str =&gt; str.replace(/-(\w)/g, ($0, $1) =&gt; $1.toUpperCase())</code></pre><p>效果：</p><pre><code>console.log(toCamel(&#39;patience-from-zhou&#39;))// patienceFromZhou</code></pre>]]></content>
+    <content type="html"><![CDATA[<p><i>ES6+正则</i><br><a id="more"></a></p><pre><code>const toCamel = str =&gt; str.replace(/-(\w)/g, ($0, $1) =&gt; $1.toUpperCase())</code></pre><p>效果：</p><pre><code>console.log(toCamel(&#39;patience-from-zhou&#39;))// patienceFromZhou</code></pre>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;pre&gt;&lt;code&gt;const toCamel = str =&amp;gt; str.replace(/-(\w)/g, ($0, $1) =&amp;gt; $1.toUpperCase())
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;效果：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;console.log(t
-      
+      &lt;p&gt;&lt;i&gt;ES6+正则&lt;/i&gt;&lt;br&gt;
     
     </summary>
     
@@ -48,7 +43,7 @@
     <link href="https://bydraw.github.io/2018/04/12/20180412/"/>
     <id>https://bydraw.github.io/2018/04/12/20180412/</id>
     <published>2018-04-12T02:28:45.318Z</published>
-    <updated>2018-06-14T10:01:00.043Z</updated>
+    <updated>2018-06-25T09:06:07.869Z</updated>
     
     <content type="html"><![CDATA[<p><i>简单的遍历和递归。</i><br><a id="more"></a><br>转换前：</p><pre><code>{  singleProp: 1,  multiProp: {    a: 2,    b: {      x: 3,      y: 4    }  }}</code></pre><p>转换后：</p><pre><code>{  singleProp: 1,  multiProp.a: 2,  multiProp.b.x: 3,  multiProp.b.y :4}</code></pre><p>具体方法：</p><pre><code>function multToSingleObj(obj) {  var newObj = {};  for (var key in obj) {    var tempAttr = obj[key];    if (typeof (tempAttr) !== &quot;object&quot;) {      newObj[key] = tempAttr;    } else {      var subObj = multToSingleObj(tempAttr);      for (var subKey in subObj) {        newObj[key + &quot;.&quot; + subKey] = subObj[subKey];      }    }  }  return newObj;}</code></pre>]]></content>
     
@@ -58,7 +53,7 @@
     
     </summary>
     
-      <category term="javacsript" scheme="https://bydraw.github.io/categories/javacsript/"/>
+      <category term="javascript" scheme="https://bydraw.github.io/categories/javascript/"/>
     
     
   </entry>

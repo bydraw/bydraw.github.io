@@ -5,7 +5,8 @@
     <entry>
       <title><![CDATA[一句话将kebab-case转换为PascalCase]]></title>
       <url>/2018/06/25/20180625/</url>
-      <content type="html"><![CDATA[<pre><code>const toCamel = str =&gt; str.replace(/-(\w)/g, ($0, $1) =&gt; $1.toUpperCase())
+      <content type="html"><![CDATA[<p><i>ES6+正则</i><br><a id="more"></a></p>
+<pre><code>const toCamel = str =&gt; str.replace(/-(\w)/g, ($0, $1) =&gt; $1.toUpperCase())
 </code></pre><p>效果：</p>
 <pre><code>console.log(toCamel(&#39;patience-from-zhou&#39;))
 // patienceFromZhou
@@ -67,7 +68,7 @@
       
         <categories>
             
-            <category> javacsript </category>
+            <category> javascript </category>
             
         </categories>
         
