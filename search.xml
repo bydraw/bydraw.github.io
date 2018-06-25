@@ -3,7 +3,31 @@
   
     
     <entry>
-      <title><![CDATA[JS多级属性对象转换为一级属性对象]]></title>
+      <title><![CDATA[一句话将kebab-case转换为PascalCase]]></title>
+      <url>/2018/06/25/20180625/</url>
+      <content type="html"><![CDATA[<pre><code>const toCamel = str =&gt; str.replace(/-(\w)/g, ($0, $1) =&gt; $1.toUpperCase())
+</code></pre><p>效果：</p>
+<pre><code>console.log(toCamel(&#39;patience-from-zhou&#39;))
+// patienceFromZhou
+</code></pre>]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> ES6 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JS多级属性对象转换为一级属性对象(ES5)]]></title>
       <url>/2018/04/12/20180412/</url>
       <content type="html"><![CDATA[<p><i>简单的遍历和递归。</i><br><a id="more"></a><br>转换前：</p>
 <pre><code>{

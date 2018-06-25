@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bydraw.github.io/"/>
-  <updated>2018-04-12T03:37:28.913Z</updated>
+  <updated>2018-06-25T09:03:01.249Z</updated>
   <id>https://bydraw.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JS多级属性对象转换为一级属性对象</title>
+    <title>一句话将kebab-case转换为PascalCase</title>
+    <link href="https://bydraw.github.io/2018/06/25/20180625/"/>
+    <id>https://bydraw.github.io/2018/06/25/20180625/</id>
+    <published>2018-06-25T08:58:31.740Z</published>
+    <updated>2018-06-25T09:03:01.249Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>const toCamel = str =&gt; str.replace(/-(\w)/g, ($0, $1) =&gt; $1.toUpperCase())</code></pre><p>效果：</p><pre><code>console.log(toCamel(&#39;patience-from-zhou&#39;))// patienceFromZhou</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;const toCamel = str =&amp;gt; str.replace(/-(\w)/g, ($0, $1) =&amp;gt; $1.toUpperCase())
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;效果：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;console.log(t
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="https://bydraw.github.io/categories/javascript/"/>
+    
+    
+      <category term="ES6" scheme="https://bydraw.github.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS多级属性对象转换为一级属性对象(ES5)</title>
     <link href="https://bydraw.github.io/2018/04/12/20180412/"/>
     <id>https://bydraw.github.io/2018/04/12/20180412/</id>
-    <published>2018-04-12T02:28:45.317Z</published>
-    <updated>2018-04-12T03:37:28.913Z</updated>
+    <published>2018-04-12T02:28:45.318Z</published>
+    <updated>2018-06-14T10:01:00.043Z</updated>
     
     <content type="html"><![CDATA[<p><i>简单的遍历和递归。</i><br><a id="more"></a><br>转换前：</p><pre><code>{  singleProp: 1,  multiProp: {    a: 2,    b: {      x: 3,      y: 4    }  }}</code></pre><p>转换后：</p><pre><code>{  singleProp: 1,  multiProp.a: 2,  multiProp.b.x: 3,  multiProp.b.y :4}</code></pre><p>具体方法：</p><pre><code>function multToSingleObj(obj) {  var newObj = {};  for (var key in obj) {    var tempAttr = obj[key];    if (typeof (tempAttr) !== &quot;object&quot;) {      newObj[key] = tempAttr;    } else {      var subObj = multToSingleObj(tempAttr);      for (var subKey in subObj) {        newObj[key + &quot;.&quot; + subKey] = subObj[subKey];      }    }  }  return newObj;}</code></pre>]]></content>
     
@@ -60,8 +87,8 @@
     <title>2017 Easyui 使用总结 （编辑中）</title>
     <link href="https://bydraw.github.io/2018/04/03/20180403/"/>
     <id>https://bydraw.github.io/2018/04/03/20180403/</id>
-    <published>2018-04-03T02:18:42.850Z</published>
-    <updated>2018-04-04T05:32:52.443Z</updated>
+    <published>2018-04-03T02:18:42.851Z</published>
+    <updated>2018-06-14T10:01:30.685Z</updated>
     
     <content type="html"><![CDATA[<p><i>即使Easyui的大部分功能实现已经落后于当前的前端技术，但其丰富的功能和超前的思想仍令人赞叹。</i><br><a id="more"></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Easyui作为一个基于jQuery的早期UI框架，给开发者带来了很多益处，极大地缩减了非核心业务外的开发时间。丰富的可配置控件和API让开发变得非常灵活，可以借此实现非常繁杂的业务功能。虽然随着前端技术的发展和业务需求的逐渐庞大，Easyui传统的DOM实现导致了大场景下的性能问题，但其HTML/JS的双风格写法与当下流行的Vue/React框架思想不谋而合，这着实让人感叹。</p>]]></content>
     
